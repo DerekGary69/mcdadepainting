@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDade Painting | Recommended Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div id="burgermenu" class="closed">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="recommended.html" class="selected">Recommended Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <body>
+        
+    <div class="hamburger-menu" onclick="toggleBurger()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <header>
+        <nav>
+            <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
+            <div id="navlinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="recommended.html" class="selected">Recommended Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                
+            </div>  
+        </nav>
+    </header>
+
+    <section id="products" style="margin-top: 5em;margin-bottom: 4em;">
+        <h2>Recommended Products</h2>
+        <p>For those inclined towards DIY, we recommend a variety of products. Each is suited to different use cases, and all are designed to withstand the test of time, both indoors and outdoors.</p>        <div class="product-grid">
+            <div class="product">
+                <h3>Undercoat</h3>
+                <img src="undercoat.webp" alt="Undercoat">
+                <p>Placeholder text for Undercoat.</p>
+            </div>
+            <div class="product">
+                <h3>Ceiling Paint</h3>
+                <img src="ceiling_paint.webp" alt="Ceiling Paint">
+                <p>Placeholder text for Ceiling Paint.</p>
+            </div>
+            <div class="product">
+                <h3>Decking Oil</h3>
+                <img src="decking_oil.webp" alt="Decking Oil">
+                <p>Placeholder text for Decking Oil.</p>
+            </div>
+            <div class="product">
+                <h3>Bathroom Paint</h3>
+                <img src="bathroom_paint.webp" alt="Bathroom Paint">
+                <p>Placeholder text for Bathroom Paint.</p>
+            </div>
+            <div class="product">
+                <h3>Filler</h3>
+                <img src="placeholder.png" alt="Filler">
+                <p>Placeholder text for Filler.</p>
+            </div>
+            <div class="product">
+                <h3>Rot Repair</h3>
+                <img src="placeholder.png" alt="Rot Repair">
+                <p>Placeholder text for Rot Repair.</p>
+            </div>
+    </section>
+</body>
+<script>
+    let burgerToggles = document.getElementsByClassName("hamburger-menu");
+    let burgerMenu = document.getElementById("burgermenu");
+    let header = document.getElementsByTagName("header")[0];
+    let sections = document.getElementsByTagName("section");
+
+    function toggleBurger() {
+        for (let i = 0; i < burgerToggles.length; i++) {
+            burgerToggles[i].classList.toggle("active");
+        }
+        burgerMenu.classList.toggle("open");
+        burgerMenu.classList.toggle("closed");
+        header.classList.toggle("burgeropen");
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].classList.toggle("burgeropen");
+        }
+
+    }
+</script>
+</html>

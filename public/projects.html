@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDade Painting | Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div id="burgermenu" class="closed">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="selected">Projects</a>
+        <a href="recommended.html">Recommended Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <header>
+        <nav>
+            <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
+            <div id="navlinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html" class="selected">Projects</a>
+                <a href="recommended.html">Recommended Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>  
+            <div class="hamburger-menu" onclick="toggleBurger()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="projects" style="margin-top: 5em;">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <a href="./projects/project1.html">
+                    <h3>Project 1</h3>
+                <p>Placeholder text for Project 1.</p>
+                <img src="placeholder.png" alt="Project 1">
+                </a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <img src="placeholder.png" alt="Project 2">
+                <p>Placeholder text for Project 2.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <img src="placeholder.png" alt="Project 3">
+                <p>Placeholder text for Project 3.</p>
+            </div>
+            <div class="project">
+                <h3>Project 4</h3>
+                <img src="placeholder.png" alt="Project 4">
+                <p>Placeholder text for Project 4.</p>
+            </div>
+            <div class="project">
+                <h3>Project 5</h3>
+                <img src="placeholder.png" alt="Project 5">
+                <p>Placeholder text for Project 5.</p>
+            </div>
+            <div class="project">
+                <h3>Project 6</h3>
+                <img src="placeholder.png" alt="Project 6">
+                <p>Placeholder text for Project 6.</p>
+            </div>
+        </div>
+
+</body>
+
+<script>
+    let burgerToggles = document.getElementsByClassName("hamburger-menu");
+    let burgerMenu = document.getElementById("burgermenu");
+    let header = document.getElementsByTagName("header")[0];
+    let sections = document.getElementsByTagName("section");
+
+    function toggleBurger() {
+        for (let i = 0; i < burgerToggles.length; i++) {
+            burgerToggles[i].classList.toggle("active");
+        }
+        burgerMenu.classList.toggle("open");
+        burgerMenu.classList.toggle("closed");
+        header.classList.toggle("burgeropen");
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].classList.toggle("burgeropen");
+        }
+
+    }
+</script>
+
+</html>
