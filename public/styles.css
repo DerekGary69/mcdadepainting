@@ -779,102 +779,7 @@ footer {
   transform: rotate(45deg) translate(-.5rem, -.5rem);
 }
 
-/* phone */
 
-@media (max-width: 768px) {
-  #navlinks {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: flex;
-    position: unset;
-    margin-right: 1rem;
-  }
-
-  header {
-    position: relative;
-    padding: 1rem;
-  }
-
-  nav {
-    position: relative;
-  }
-
-  #bannervert {
-    flex-grow: 0;
-    padding: 0;
-  }
-
-  .banner {
-    justify-content: center;
-  }
-
-  #logosvert {
-    padding-top: 1rem;
-    align-items: center;
-  }
-  
-  #bannervert img {
-    max-width: 80svw;
-  }
-
-  #bannerhor img {
-    max-width: 50%;
-  }
-
-  .auslogo {
-    max-width: 30% !important;
-    margin-left: 0%;
-  }
-
-  #servicesblurb {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .banner.services {
-    margin: 0;
-  }
-
-  #about {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: unset;
-  }
-
-  #about .aboutitems {
-    flex-wrap: wrap;
-  }
-
-  #about img {
-    padding: 0;
-  }
-
-  #about p {
-    padding: 1rem 2rem;
-  }
-
-  #contact {
-    margin: 0;
-    width: 100%;
-    max-width: unset;
-  }
-
-  #formhor {
-    flex-wrap: wrap;
-  }
-
-  #contactblurb {
-    max-width: unset;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-}
 
 /* projects */
 
@@ -1064,4 +969,119 @@ font-size: .8rem;
 
 .pairimgs > :nth-child(2) {
   padding-left: .5em;
+}
+
+/* phone */
+
+@media (max-width: 768px) {
+  #navlinks {
+    display: none;
+  }
+
+  .navtitle {
+    padding: 1rem 0;
+    font-size: 1.2em;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: unset;
+    /* margin-right: 1rem; */
+  }
+
+  header {
+    position: relative;
+    padding: 1rem;
+    background-color: var(--background-color);
+  }
+
+  nav {
+    position: relative;
+  }
+
+  #bannervert {
+    flex-grow: 0;
+    padding: 0;
+  }
+
+  .banner {
+    justify-content: center;
+  }
+
+  #logosvert {
+    padding-top: 1rem;
+    align-items: center;
+  }
+  
+  #bannervert img {
+    max-width: 80svw;
+  }
+
+  #bannerhor img {
+    max-width: 50%;
+  }
+
+  .auslogo {
+    max-width: 30% !important;
+    margin-left: 0%;
+  }
+
+  #servicesblurb {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .banner.services {
+    margin: 0;
+  }
+
+  #about {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: unset;
+  }
+
+  #about .aboutitems {
+    flex-wrap: wrap;
+  }
+
+  #about img {
+    padding: 0;
+  }
+
+  #about p {
+    padding: 1rem 2rem;
+  }
+
+  #contact {
+    margin: 0;
+    width: 100%;
+    max-width: unset;
+  }
+
+  #formhor {
+    flex-wrap: wrap;
+  }
+
+  #contactblurb {
+    max-width: unset;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .project-grid {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  #projects {
+    max-width: unset;
+    width: 80%;
+  }
+
 }
