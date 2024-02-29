@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <div id="burgermenu" class="closed">
-    <div class="hamburger-menu" onclick="toggleBurger()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>  
     <a href="index.html" class="selected">Home</a>
     <a href="services.html">Services</a>
     <a href="projects.html">Projects</a>
@@ -25,26 +20,27 @@
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact</a>
 </div>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
-            <div id="navlinks">
-                <a href="index.html" class="selected">Home</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="recommended.html">Recommended Products</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>     
-            </div>     
-            <div class="hamburger-menu" onclick="toggleBurger()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>  
-        </nav>
-        
-    </header>
+    
+
+<header>
+    <nav>
+        <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
+        <div id="navlinks">
+            <a href="index.html" class="selected">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="recommended.html">Recommended Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>  
+    </nav>
+    <div class="hamburger-menu" onclick="toggleBurger()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
 
     <section class="banner">
         <div id="bannervert">
@@ -52,8 +48,8 @@
         </div>
         <div id="bannerhor">
             <div id="logosvert">
-                <img src="../public/haymes.png" alt="Haymes Paint">
-                <img src="../public/ausoo.png" alt="Australian Owned and Operated" style="max-width: 8%;     margin-left: 4%;
+                <img class="haymes" src="../public/haymes.png" alt="Haymes Paint">
+                <img class="auslogo" src="../public/ausoo.png" alt="Australian Owned and Operated";
                 ">
             </div>
         </div>

@@ -93,6 +93,7 @@ body {
   background-color: var(--background-color);
   /* padding-bottom: 4em; */
   /* font-size: 1rem; */
+  overflow-y: scroll;
 }
 
 h2 {
@@ -115,12 +116,20 @@ h3 {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
+#burgermenu > a {
+  margin: 2rem;
+}
+
+#burgermenu > a.selected {
+  font-weight: bold;
+}
+
 .burgeropen:not(header) {
-  display: none;
+  display: none !important;
 }
 
 #burgermenu.closed {
@@ -128,10 +137,17 @@ h3 {
   pointer-events: none;
 }
 
+h1 {
+  margin: 0;
+  /* font-family: 'Helvetica Neue'; */
+  font-weight: bold;
+}
+
 header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
 }
 
 nav {
@@ -141,16 +157,18 @@ nav {
   /* max-width: 80vw; */
   position: fixed;
   top: 0;
+  left: 0;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  */
   /* backdrop-filter: blur(10px);  */
   z-index: 99;
   width: 100%;
   font-size: .8em;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }
 
-nav a {
+nav a:not(.navtitle) {
+  font-size: 1.25em;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -172,12 +190,14 @@ nav a:hover:not(.navtitle) {
 }
 
 .navtitle {
+  text-decoration: none;
+  font-size: 1.5em;
   font-weight: bold;
-  padding: 0 1em;
+  padding: 1em;
   font-family: var(--header-font);
   text-transform: uppercase;
   text-wrap: nowrap;
-  padding-left: 4em;
+  /* padding-left: 4em; */
 }
 
 #navlinks {
@@ -190,15 +210,26 @@ nav a:hover:not(.navtitle) {
 }
 
 nav .selected {
-  border-bottom: 4px solid var(--card-color);
+  border-bottom: 4px solid var(--card-color) !important;
 }
 
 .banner.services {
+  margin-top: 2em;
   background-image: url(../public/brush1.png);
-  height: fit-content;
+  height: 100%;
   padding: 3rem 3rem 0;
   display: flex;
   align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.banner.projectbanner {
+  background-image: url(../public/projbanner.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 #servicesblurb {
@@ -206,6 +237,7 @@ nav .selected {
   padding: 3rem;
   max-width: 50%;
   line-height: 1.5;
+  margin: 3rem 3rem 0;
 }
 
 #servicesblurb h2 {
@@ -220,7 +252,7 @@ nav .selected {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100svh;
+  height: 80svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,7 +266,7 @@ nav .selected {
   align-items: center;
   padding: 4em;
   flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: space-around;
 
 }
 
@@ -250,10 +282,17 @@ nav .selected {
   align-items: flex-start;
 }
 
+.auslogo {
+  max-width: 8% !important;
+  margin-left: 4%;
+}
+
 #bannerhor img {
   max-width: 15%;
   height: auto;
 }
+
+
 
 #logosvert {
   display: flex;
@@ -480,6 +519,10 @@ footer {
 
 /* ABOUT */
 
+#about {
+  margin-top: 6em;
+}
+
 #about h2, #about h3 {
   text-align: center;
 }
@@ -499,9 +542,14 @@ footer {
   padding-top: 1em;
   padding-bottom: 1em;
   display: flex;
+  justify-content: center;
 }
 
 /* CONTACT */
+
+#contact {
+  margin: 5em auto 4em;
+}
 
 #contact h2 {
   /* padding-left: 1rem; */
@@ -594,6 +642,12 @@ footer {
 
 /* SERVICES */
 
+#services {
+  display: flex;
+  max-width: 100%;
+  padding: 0 2em;
+}
+
 #services p {
   padding: 1em 0 1em 2em;
   max-width: 80vw;
@@ -606,12 +660,15 @@ footer {
 }
 
 .service-grid {
+  display: flex;
   /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: dense;
   gap: 1em; */
   column-count: 2;
   column-gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .service {
@@ -620,10 +677,19 @@ footer {
   align-items: center;
   background: white; */
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
+  width: 16%;
+  min-width: 300px;
   background: white;
   break-inside: avoid;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
+  height: min-content;
+}
+
+.service p {
+  padding: 1rem 1rem 2rem !important;
+  text-align: left;
+  width: 100%;
 }
 
 .service h3 {
@@ -722,7 +788,92 @@ footer {
 
   .hamburger-menu {
     display: flex;
+    position: unset;
+    margin-right: 1rem;
   }
+
+  header {
+    position: relative;
+    padding: 1rem;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  #bannervert {
+    flex-grow: 0;
+    padding: 0;
+  }
+
+  .banner {
+    justify-content: center;
+  }
+
+  #logosvert {
+    padding-top: 1rem;
+    align-items: center;
+  }
+  
+  #bannervert img {
+    max-width: 80svw;
+  }
+
+  #bannerhor img {
+    max-width: 50%;
+  }
+
+  .auslogo {
+    max-width: 30% !important;
+    margin-left: 0%;
+  }
+
+  #servicesblurb {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .banner.services {
+    margin: 0;
+  }
+
+  #about {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: unset;
+  }
+
+  #about .aboutitems {
+    flex-wrap: wrap;
+  }
+
+  #about img {
+    padding: 0;
+  }
+
+  #about p {
+    padding: 1rem 2rem;
+  }
+
+  #contact {
+    margin: 0;
+    width: 100%;
+    max-width: unset;
+  }
+
+  #formhor {
+    flex-wrap: wrap;
+  }
+
+  #contactblurb {
+    max-width: unset;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
 }
 
 /* projects */
@@ -733,6 +884,8 @@ footer {
   align-items: center;
   background-color: white;
   padding: 2em;
+  max-width: 60vw;
+  margin-top: 30svh;
 }
 
 #projects h2 {
