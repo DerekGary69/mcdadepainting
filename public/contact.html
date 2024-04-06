@@ -14,37 +14,43 @@
 </head>
 <body>
     <div id="burgermenu" class="closed">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="selected">Home</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
         <a href="recommended.html">Recommended Products</a>
         <a href="about.html">About Us</a>
-        <a href="contact.html" class="selected">Contact</a>
+        <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger-menu" onclick="toggleBurger()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <header>
-        <nav>
-            <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
-            <div id="navlinks">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="recommended.html">Recommended Products</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html" class="selected">Contact</a>
-                
-            </div>  
-        </nav>
-    </header>
+
+        <header>
+            <nav>
+                <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
+                <div id="navlinks">
+                    <a href="index.html" class="selected">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="recommended.html">Recommended Products</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>     
+                </div>     
+                <div class="hamburger-menu" onclick="toggleBurger()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>  
+            </nav>
+            
+        </header>
+
     <section id="contact" style="margin-top: 5em; margin-bottom: 4em;">
         <h2>Request a Quote</h2>
-        <p id="contactblurb">Ready to give your space a fresh new look? Let's chat about the painting job you have in mind. Whether it's a room, the exterior, or a unique project, we're here to help. Share the details about the size, scope, and any specific ideas you have – your input is crucial in tailoring our approach to your needs. No pressure, just a friendly conversation to get started on transforming your space. Shoot us the details about your painting project, and we'll take it from there!<br><br>We will contact you at your nominated email address/phone number. If you have a preference as to which address or at what time, please include that in your message.</p>
+        <p id="contactblurb">Ready to give your space a fresh new look? Let's chat about the painting job you have in mind. Whether it's just a room, an exterior, or a unique project, we're here to help. Share the details about the size, scope, and any specific ideas you have – your input is crucial in tailoring our approach to your needs. No pressure, just a friendly conversation to get started on transforming your space. Shoot us the details about your painting project, and we'll take it from there!<br><br><br>We will contact you at your nominated email address/phone number. If you have a preference as to which address or at what time, please include that in your message.</p>
+        <div class="links">
+            <a href="tel:0437933192">0437 933 192</a>
+            <span><a href="mailto:mcdadepainting@gmail.com">mcdadepainting@gmail.com</a></span>
+        </div>        
         <div id="contactlayout">            
-            <form id="contactform" autocomplete="off">
+            <form id="contactform" autocomplete="off" netlify>
                 <div id="formvert">
                     <div id="formhor">
                         <div>
@@ -74,7 +80,6 @@
         </div>
     </section>
 
-    <script src="client.js"></script>
 </body>
 <script>
     let burgerToggles = document.getElementsByClassName("hamburger-menu");

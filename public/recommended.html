@@ -14,69 +14,128 @@
 </head>
 <body>
     <div id="burgermenu" class="closed">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="selected">Home</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
-        <a href="recommended.html" class="selected">Recommended Products</a>
+        <a href="recommended.html">Recommended Products</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
     </div>
     <body>
-        
-    <div class="hamburger-menu" onclick="toggleBurger()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <header>
-        <nav>
-            <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
-            <div id="navlinks">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="recommended.html" class="selected">Recommended Products</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                
-            </div>  
-        </nav>
-    </header>
+        <header>
+            <nav>
+                <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
+                <div id="navlinks">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="recommended.html" class="selected">Recommended Products</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>     
+                </div>     
+                <div class="hamburger-menu" onclick="toggleBurger()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>  
+            </nav>
+            
+        </header>
 
     <section id="products" style="margin-top: 5em;margin-bottom: 4em;">
         <h2>Recommended Products</h2>
-        <p>For those inclined towards DIY, we recommend a variety of products. Each is suited to different use cases, and all are designed to withstand the test of time, both indoors and outdoors.</p>        <div class="product-grid">
+        
+        <p style="margin-bottom: 1rem;">We recommend a variety of professional-grade products to ensure a high-quality finish. Our preferred brands include Haymes Paint and Porter's Paint, known for their durability, quality, and wide range of colours. These Australian made and owned products are not only reliable but also offer low odour and quick drying time, making them ideal for your next painting project.</p>
+        
+        <div class="imgpair">
+            <div class="pair1">
+                <div class="pair1top">
+                    <img src="../public/haymes.png" alt="Haymes Paint" style="max-width: 45%;">
+                <p>Haymes Paint is a family-owned Australian business that has been around for over 80 years. Their range of paints is designed to withstand the harsh Australian climate, making them perfect for both interior and exterior use. Haymes Paint is known for its durability, quality, and wide range of colours, making it a popular choice for both professionals and DIY enthusiasts.</p>        
+                <p>For the majority of standard applications, such as walls, ceilings, and trim, we use Haymes Paint. However, when it comes to color selection, we defer to Porter's Paints.</p>
+                
+                </div>
+                <img src="haymestile1.webp">
+            </div>
+            <div class="pair2">
+                <div class="pair2top">
+                    <img src="../public/porters-blue.png" alt="Porters Paint" style="max-width: 35%; margin-top: 1.5em;">
+                    <p>Porter's Paints offers a wide range of colours, providing a diverse selection for any painting project. McDade Painting chooses to use Porter's Paints due to their extensive colour variety, allowing them to meet the unique preferences and requirements of their clients.</p> 
+                    <p>For specialty applications, such as feature walls, cabinetry, and furniture, we use Porter's Paints. Their range of colours and finishes allows us to create unique and custom looks for our clients. However when it comes to standard applications, such as walls, ceilings, and trim, we use Haymes Paint.</p>    
+                    
+                </div>
+               <img src="porters.jpeg">
+            </div>
+        </div>
+        <div class="product-grid">
+
             <div class="product">
                 <h3>Undercoat</h3>
-                <img src="undercoat.webp" alt="Undercoat">
-                <p>Placeholder text for Undercoat.</p>
+                <img src="ultracoat.webp" alt="Undercoat">
+                <p>McDade Painting recommends and uses Haymes Ultracover for its superior coverage and adhesion. Its low odour and quick drying time make it ideal for interior and exterior use.</p>
             </div>
             <div class="product">
-                <h3>Ceiling Paint</h3>
-                <img src="ceiling_paint.webp" alt="Ceiling Paint">
-                <p>Placeholder text for Ceiling Paint.</p>
+                <h3>Ceiling</h3>
+                <img src="ceiling.webp" alt="Ceiling Paint">
+                <p>Made by Haymes, this ceiling paint is designed to provide a flat finish that hides imperfections and reflects light. It's perfect for brightening up any room.</p>
             </div>
             <div class="product">
-                <h3>Decking Oil</h3>
-                <img src="decking_oil.webp" alt="Decking Oil">
-                <p>Placeholder text for Decking Oil.</p>
+                <h3>Deck & Timber Stain</h3>
+                <img src="dexpress.webp" alt="Decking Oil">
+                <p>Haymes Dexpress is a high-quality decking oil that penetrates deep into the timber, providing long-lasting protection against the elements. It's perfect for revitalizing and protecting your deck.</p>
             </div>
             <div class="product">
-                <h3>Bathroom Paint</h3>
-                <img src="bathroom_paint.webp" alt="Bathroom Paint">
-                <p>Placeholder text for Bathroom Paint.</p>
+                <h3>Kitchen & Bathroom</h3>
+                <img src="bathroom.webp" alt="Bathroom Paint">
+                <p>Haymes Kitchen & Bathroom paint is specially formulated to resist mould and mildew, making it perfect for high-moisture areas. Its low odour and easy clean-up make it ideal for any project.</p>
             </div>
             <div class="product">
-                <h3>Filler</h3>
-                <img src="placeholder.png" alt="Filler">
-                <p>Placeholder text for Filler.</p>
+                <h3>Stain Blocker</h3>
+                <img src="zinsser.png" alt="Filler">
+                <p>Zinsser Undercoat Oil-Based Stain Blocker is perfect for covering stubborn stains and sealing odours. It's ideal for use on water stains, smoke damage, and more.</p>
             </div>
             <div class="product">
+                <h3>Gap Sealant</h3>
+                <img src="gaps-t.png" alt="Filler">
+                <p>Polyfilla Gaps & Cracks is a flexible gap sealant that's perfect for filling gaps and cracks around the home. It's easy to apply and dries quickly, making it our top choice.</p>
+            </div>
+            <div class="product">
+                <h3>Brushes</h3>
+                <img src="brush.webp" alt="Filler">
+                <p>McDade Painting recommends using quality brushes for a professional finish. We prefer Monarch brushes for their durability and precision, ensuring a smooth and even coat every time.</p>
+            </div>
+            <div class="product">
+                <h3>Masking Tape</h3>
+                <img src="tape.png" alt="Filler">
+                <p>Haymes Painter's Masking Tape is perfect for achieving clean lines and protecting surfaces during painting. Its low tack adhesive ensures easy removal without damaging your paintwork.</p>
+            </div>
+            <!-- <div class="product">
                 <h3>Rot Repair</h3>
                 <img src="placeholder.png" alt="Rot Repair">
                 <p>Placeholder text for Rot Repair.</p>
-            </div>
+            </div> -->
     </section>
+    <footer id="contactinfo">
+        <div class="ourinfo">
+            <i class="material-icons">phone</i>
+            <p>Phone<br><a href="tel:0437933192">0437 933 192</a></p>
+        </div>
+        <div class="ourinfo">
+            <i class="material-icons">email</i>
+            <p>Email<br><a href="mailto:mcdadepainting@gmail.com">mcdadepainting@gmail.com</a></p>
+        </div>
+        <div class="ourinfo">
+            <i class="material-icons">share</i>
+            <p>Social Media<br>
+                <a href="https://www.instagram.com/mcdadepainting" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </p>
+        </div>
+        <a class="button" href="contact.html">
+            Contact
+        </a>
+    </footer>
 </body>
 <script>
     let burgerToggles = document.getElementsByClassName("hamburger-menu");
