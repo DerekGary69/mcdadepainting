@@ -105,7 +105,7 @@
                             Experience the transformation of a classic Australian beach house into a radiant gem. The sunlit blue walls evoke coastal charm, perfectly framing ocean views through meticulously brushed windows. Eaves and gutters, renewed to pristine condition, offer both protection and sleek elegance. Inspired by natural hues, this beach house revival captures the essence of coastal living in every brushstroke.
                         </p>
                         <div class="projlink">
-                            <a href="projects.html" class="material-symbols-outlined">
+                            <a href="projects/project3.html" class="material-symbols-outlined">
                                 navigate_next
                             </a>
                         </div>
@@ -120,7 +120,7 @@
                                 The beach house features a complementary blend of shades that dance together. Light blue walls evoke the calming embrace of the ocean, while the white windows punctuate them like elegant accents. The dark blue gutters, a touch of sophistication against the sky, channel a sense of depth and character. Above, the white eaves stand framing the entire composition with a subtle, airy contrast.
                             </p>
                             <div class="projlink">
-                                <a href="projects.html" class="material-symbols-outlined">
+                                <a href="projects/project3.html" class="material-symbols-outlined">
                                     navigate_next
                                 </a>
                             </div>
@@ -274,16 +274,19 @@
 <script>
     let burgerToggles = document.getElementsByClassName("hamburger-menu");
     let burgerMenu = document.getElementById("burgermenu");
-    let header = document.getElementsByTagName("header")[0];
     let sections = document.getElementsByTagName("section");
+    let footer = document.getElementById("contactinfo");
 
     function toggleBurger() {
+        window.scrollTo(0, 0);
+
         for (let i = 0; i < burgerToggles.length; i++) {
             burgerToggles[i].classList.toggle("active");
         }
         burgerMenu.classList.toggle("open");
 
-        header.classList.toggle("burgeropen");
+        footer.classList.toggle("burgeropen");
+
         for (let i = 0; i < sections.length; i++) {
             sections[i].classList.toggle("burgeropen");
         }

@@ -22,21 +22,21 @@
 </div>
 <body>
     
-    <div class="hamburger-menu" onclick="toggleBurger()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <header>
         <nav>
             <a href="../index.html" class="navtitle"><h1>McDade Painting</h1></a>
             <div id="navlinks">
-                <a href="../index.html">Home</a>
+                <a href="../index.html" class="selected">Home</a>
                 <a href="../services.html">Services</a>
                 <a href="../projects.html">Projects</a>
                 <a href="../recommended.html">Recommended Products</a>
                 <a href="../about.html">About Us</a>
-                <a href="../contact.html">Contact</a>
+                <a href="../contact.html">Contact</a>     
+            </div>     
+            <div class="hamburger-menu" onclick="toggleBurger()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>  
         </nav>
     </header>
@@ -75,6 +75,7 @@
                 <p>- Anne</p>
             </div>
         </div>
+        <a id="return" href="../projects.html"><span class="material-icons">navigate_before</span>All Projects</a>
         </section>
         
     
@@ -100,4 +101,26 @@
             </a>
         </footer>
 </body>
+<script>
+    let burgerToggles = document.getElementsByClassName("hamburger-menu");
+    let burgerMenu = document.getElementById("burgermenu");
+    let sections = document.getElementsByTagName("section");
+    let footer = document.getElementById("contactinfo");
+
+    function toggleBurger() {
+        window.scrollTo(0, 0);
+
+        for (let i = 0; i < burgerToggles.length; i++) {
+            burgerToggles[i].classList.toggle("active");
+        }
+        burgerMenu.classList.toggle("open");
+
+        footer.classList.toggle("burgeropen");
+
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].classList.toggle("burgeropen");
+        }
+
+    }
+</script>
 </html>

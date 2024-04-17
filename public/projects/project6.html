@@ -22,21 +22,21 @@
 </div>
 <body>
     
-    <div class="hamburger-menu" onclick="toggleBurger()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <header>
         <nav>
             <a href="../index.html" class="navtitle"><h1>McDade Painting</h1></a>
             <div id="navlinks">
-                <a href="../index.html">Home</a>
+                <a href="../index.html" class="selected">Home</a>
                 <a href="../services.html">Services</a>
                 <a href="../projects.html">Projects</a>
                 <a href="../recommended.html">Recommended Products</a>
                 <a href="../about.html">About Us</a>
-                <a href="../contact.html">Contact</a>
+                <a href="../contact.html">Contact</a>     
+            </div>     
+            <div class="hamburger-menu" onclick="toggleBurger()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>  
         </nav>
     </header>
@@ -52,16 +52,16 @@
             <h2>Kingston Garage</h2>
             <p>This project involved the interior and exterior painting of a residential property. The client wanted a fresh, modern look, so we used a combination of neutral and bold colors. The project was completed within the agreed timeline and budget, and the client was extremely satisfied with the result. We used high-quality, eco-friendly paints to ensure the longevity of the work and the health of the residents.</p>
         </div>
-        <div class="heroimgs" style="">
+        <div class="heroimgs" style="overflow: hidden;">
             <!-- <video src="../woodentrim.MOV" autoplay muted loop></video> -->
             <img src="../grgtitle1.jpeg">
             <img src="../grgroof2.jpeg" style="flex-grow: 1;" >
                 <!-- <img src="../mnddoor4.jpeg" style="height: 30%; background-position: top; object-fit: cover;"> -->
         </div>
         
-            <img src="../grgint1.jpeg">
+            <img src="../grgint1.jpeg" style="padding-bottom: 1em;">
             
-        <div class="heroimgs">
+        <div class="heroimgs" style="overflow: hidden;">
             <img src="../grgbefore1.jpeg" >
             <img src="../grgafter3.jpeg" >
         </div>
@@ -71,7 +71,7 @@
         </div>
         <div class="beforeafter">
                 <img src="../grgbefore4.jpeg">
-                <img src="../grgcorner1.jpeg" style="width: 50%;">
+                <img src="../grgcorner1.jpeg">
         </div>
         <div id="testimonials">
             <h4>Testimonial</h4>
@@ -80,11 +80,8 @@
                 <br>
                 <p>- Mark</p>
             </div>
-            <div class="contact">
-                <button class="button" onclick="window.location.href='../contact.html'">Request a Quote</button>
-                <!-- <i class="instagram fab fa-instagram"></i> -->
-            </div>
         </div>
+        <a id="return" href="../projects.html"><span class="material-icons">navigate_before</span>All Projects</a>
         </section>
         
         <footer id="contactinfo">
@@ -110,4 +107,26 @@
         </footer>
     
 </body>
+<script>
+    let burgerToggles = document.getElementsByClassName("hamburger-menu");
+    let burgerMenu = document.getElementById("burgermenu");
+    let sections = document.getElementsByTagName("section");
+    let footer = document.getElementById("contactinfo");
+
+    function toggleBurger() {
+        window.scrollTo(0, 0);
+
+        for (let i = 0; i < burgerToggles.length; i++) {
+            burgerToggles[i].classList.toggle("active");
+        }
+        burgerMenu.classList.toggle("open");
+
+        footer.classList.toggle("burgeropen");
+
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].classList.toggle("burgeropen");
+        }
+
+    }
+</script>
 </html>
