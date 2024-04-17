@@ -4,7 +4,7 @@ form.addEventListener('submit', async function(event) {
     var phone = document.querySelector('#phone').value;
 
     if (email === '' && phone === '') {
-        alert('Please enter an email address or a phone number. Or both!');
+        alert('Please enter an email address or a phone number.');
         event.preventDefault();
     } else {
         event.preventDefault();

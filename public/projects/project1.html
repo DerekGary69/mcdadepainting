@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McDade Painting | Project 1</title>
+    <title>McDade Painting | Beach House</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,31 +22,34 @@
 </div>
 <body>
     
-    <div class="hamburger-menu" onclick="toggleBurger()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <header>
         <nav>
-            <a href="index.html" class="navtitle"><h1>McDade Painting</h1></a>
+            <a href="../index.html" class="navtitle"><h1>McDade Painting</h1></a>
             <div id="navlinks">
-                <a href="../index.html">Home</a>
+                <a href="../index.html" class="selected">Home</a>
                 <a href="../services.html">Services</a>
                 <a href="../projects.html">Projects</a>
                 <a href="../recommended.html">Recommended Products</a>
                 <a href="../about.html">About Us</a>
-                <a href="../contact.html">Contact</a>
+                <a href="../contact.html">Contact</a>     
+            </div>     
+            <div class="hamburger-menu" onclick="toggleBurger()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>  
         </nav>
     </header>
 
-    <div class="projbanner">
+    <div class="projbanner beachbanner">
         <!-- placeholder banner image -->
+        <!-- <video autoplay muted loop id="beachbannermov">
+            <source src="../beachbanner3.MOV"   type="video/mp4">
+        </video> -->
     </div>
     <section class="projectdetails">
         <div class="projinfo">
-            <h2>Project 1 Textbox</h2>
+            <h2>Waterfront Cottage</h2>
             <p>This project involved the interior and exterior painting of a residential property. The client wanted a fresh, modern look, so we used a combination of neutral and bold colors. The project was completed within the agreed timeline and budget, and the client was extremely satisfied with the result. We used high-quality, eco-friendly paints to ensure the longevity of the work and the health of the residents.</p>
         </div>
         <div class="heroimgs">
@@ -57,14 +60,72 @@
             </div>
         </div>
         <div class="pairimgs">
-            <img src="../pair1.jpg">
+            <!-- <img src="../pair1.jpg"> -->
+            <video autoplay muted loop playsinline id="beachbannermov">
+                <source src="../beachbanner77.mp4"   type="video/mp4">
+            </video>
             <img src="../pair2.jpg">
         </div>
         <div class="beforeafter">
-            <img src="../before1.JPG">
-            <img src="../after1.JPG">
+                <img src="../before1.JPG">
+                <img src="../after1.JPG">
         </div>
-    </section>
+        <div id="testimonials">
+            <h4>Testimonial</h4>
+            <div class="testimonial">
+                <p>"McDade Painting did an excellent job on our beach house. The team was professional, efficient, and friendly. They completed the project on time and within budget. The quality of their work is outstanding, and we couldn't be happier with the result. We highly recommend McDade Painting for any painting project."</p>
+                <br>
+                <p>- Mark</p>
+            </div>
+        </div>
+        <a id="return" href="../projects.html"><span class="material-icons">navigate_before</span>All Projects</a>
+        </section>
+
+        <footer id="contactinfo">
+            <div class="ourinfo">
+                <i class="material-icons">phone</i>
+                <p>Phone<br><a href="tel:0437933192">0437 933 192</a></p>
+            </div>
+            <div class="ourinfo">
+                <i class="material-icons">email</i>
+                <p>Email<br><a href="mailto:mcdadepainting@gmail.com">mcdadepainting@gmail.com</a></p>
+            </div>
+            <div class="ourinfo">
+                <i class="material-icons">share</i>
+                <p>Social Media<br>
+                    <a href="https://www.instagram.com/mcdadepainting" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </p>
+            </div>
+            <a class="button" href="../contact.html">
+                Contact
+            </a>
+        </footer>
+        
     
 </body>
+
+<script>
+    let burgerToggles = document.getElementsByClassName("hamburger-menu");
+    let burgerMenu = document.getElementById("burgermenu");
+    let sections = document.getElementsByTagName("section");
+    let footer = document.getElementById("contactinfo");
+
+    function toggleBurger() {
+        window.scrollTo(0, 0);
+
+        for (let i = 0; i < burgerToggles.length; i++) {
+            burgerToggles[i].classList.toggle("active");
+        }
+        burgerMenu.classList.toggle("open");
+
+        footer.classList.toggle("burgeropen");
+
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].classList.toggle("burgeropen");
+        }
+
+    }
+</script>
 </html>
