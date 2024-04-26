@@ -35,17 +35,17 @@ html {
 
 @font-face {
   font-family: 'Helvetica Neue Light';
-  src: url('../public/HelveticaNeueLight.ttf') format('truetype');
+  src: url('HelveticaNeueLight.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Helvetica Neue Bold';
-  src: url('../public/HelveticaNeue-Bold.ttf') format('truetype');
+  src: url('HelveticaNeue-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Poynter';
-  src: url('../public/poynter.ttf') format('truetype');
+  src: url('poynter.ttf') format('truetype');
 }
 
 :root {
@@ -223,7 +223,7 @@ nav .selected {
 }
 
 .banner.services {
-  background-image: url(../public/servicesbanner.jpeg);
+  background-image: url(servicesbanner.jpeg);
   height: fit-content;
   padding: 3rem 3rem 0;
   display: flex;
@@ -246,7 +246,7 @@ nav .selected {
 
 .banner {
   /* margin-top: 3em; */
-  background-image: url(../public/bg1.jpeg);
+  background-image: url(bg1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -324,7 +324,7 @@ footer {
 /* HOME */
 
 /* #banner {
-  background-image: url(../public/banner1.webp);
+  background-image: url(banner1.webp);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1236,8 +1236,8 @@ font-size: .8rem;
 /* individual projects */
 
 .beachbanner {
-  /* background-image: url(../public/beachbanner.MOV); */
-  background-image: url(../public/beachbanner5.jpeg);
+  /* background-image: url(beachbanner.MOV); */
+  background-image: url(beachbanner5.jpeg);
   /* height: fit-content; */
   background-size: cover;
   background-position: bottom;
@@ -1253,7 +1253,7 @@ font-size: .8rem;
 }
 
 .qbnbanner {
-  background-image: url(../public/qbnbanner.JPG);
+  background-image: url(qbnbanner.JPG);
   background-size: cover;
   /* background-repeat: no-repeat; */
   background-position: bottom;
@@ -1271,7 +1271,7 @@ font-size: .8rem;
 }
 
 .mndbanner {
-  background-image: url(../public/mndbanner1.JPG);
+  background-image: url(mndbanner1.JPG);
   background-size: cover;
   /* background-repeat: no-repeat; */
   background-position: top;
@@ -1289,7 +1289,7 @@ font-size: .8rem;
 }
 
 .grgbanner {
-  background-image: url(../public/grgbanner.JPG);
+  background-image: url(grgbanner.JPG);
   background-size: cover;
   /* background-repeat: no-repeat; */
   background-position: top;
@@ -1308,7 +1308,7 @@ font-size: .8rem;
 }
 
 .bhebanner {
-  background-image: url(../public/bhebanner1.jpeg);
+  background-image: url(bhebanner1.jpeg);
   background-size: cover;
   /* background-repeat: no-repeat; */
   background-position: center;
