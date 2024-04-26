@@ -240,7 +240,7 @@ nav .selected {
 }
 
 #servicesblurb h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: .5em;
 }
 
@@ -343,7 +343,7 @@ footer {
 }
 
 #serviceshome h2 {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-bottom: 0.5em;
   text-align: var(--textalign);
 
@@ -372,7 +372,7 @@ footer {
 }
 
 #featured-projects h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 0.5em;
   text-align: var(--textalign);
 }
@@ -411,6 +411,42 @@ footer {
   font-size: .8rem;
   text-align: center;
   /* border-bottom: 1px solid var(--accent-color); */
+}
+
+.featp {
+  position: absolute;
+  width: 60%;
+  background: white;
+  padding: 1em;
+  transform: translate(1em, -4em);
+}
+
+.featflex {
+  padding-top: 1em;
+  display: flex;
+  gap: 1em;
+  flex-grow: 1;
+}
+
+.featflex img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.featstack {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.featstack img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex-grow: 1;
 }
 
 .projgridhor {
@@ -580,6 +616,11 @@ footer {
 
 #about h2, #about h3 {
   text-align: var(--textalign);
+  font-size: 1.2em;
+}
+
+#about h3 {
+  font-size: 1em;
 }
 
 #about img {
@@ -606,6 +647,8 @@ footer {
 
 #contact h2 {
   /* padding-left: 1rem; */
+  font-size: 1.2em;
+
   text-align: var(--textalign);
 }
 
@@ -736,7 +779,7 @@ footer {
 }
 
 #services h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: var(--textalign);
 }
 
@@ -750,6 +793,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  /* align-items: flex-end; */
 }
 
 .service {
@@ -766,10 +810,20 @@ footer {
 }
 
 .service h3 {
+  font-size: 1em;
+
   padding: 1rem;
   text-align: var(--textalign);
   font-family: var(--header-font);
   width: 100%;
+}
+
+.service h4 {
+  padding: 1rem;
+  text-align: var(--textalign);
+  font-family: var(--header-font);
+  width: 100%;
+  font-size: 1em;
 }
 
 .service img {
@@ -778,6 +832,23 @@ footer {
   height: 20rem; /* Set a fixed height */
   object-fit: cover; /* Scale the image to cover the container */
   object-position: center; /* Center the image */
+}
+
+.homeservice {
+  width: min-content;
+  margin-bottom: 0;
+}
+
+.homeservice h4 {
+  padding-bottom: 2em;
+}
+
+.homeservice img {
+  width: 20rem;
+}
+
+.homeservice p {
+  text-align: left !important;
 }
 
 #recommendedtrades {
@@ -811,7 +882,7 @@ footer {
 }
 
 #products h2 {
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: var(--textalign);
 }
 
@@ -940,7 +1011,7 @@ footer {
 }
 
 #projects h2 {
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: var(--textalign);
   margin-bottom: 1em;
 }
@@ -1038,7 +1109,7 @@ footer {
 } */
 
 .project p {
-/* padding: .5rem; */
+padding: .5rem;
 font-size: .8rem;
 }
 
@@ -1337,6 +1408,22 @@ font-size: .8rem;
     padding: 1em;
   }
 
+  .featflex {
+    padding-top: .5em;
+  }
+
+  .featflex, .featstack {
+    gap: .5em;
+  }
+
+  .featp {
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 1em;
+    transform: translate(0, 0);
+  }
+
   .beachbanner, .projbanner {
     height: 40svh;
     background-position: center;
@@ -1529,6 +1616,18 @@ font-size: .8rem;
 
   .service {
     max-width: 100%;
+  }
+
+  .homeservice {
+    width: 100%;
+  }
+
+  .homeservice h4 {
+    padding-bottom: 1em;
+  }
+
+  .homeservice img {
+    width: 100%;
   }
 
   .service img {
