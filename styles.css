@@ -244,6 +244,10 @@ nav .selected {
   margin-bottom: .5em;
 }
 
+#services p.servicesextra {
+  max-width: 100%;
+}
+
 .banner {
   /* margin-top: 3em; */
   background-image: url(bg1.jpeg);
@@ -545,6 +549,7 @@ footer {
   padding-top: .5em;
   display: flex;
   flex-direction: row-reverse;
+  max-width: 80vw;
 }
 
 .projlink a {
@@ -641,6 +646,49 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+
+.aboutpaints {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+#about .aboutpaints p {
+  text-align: center;
+  max-width: 70%;
+}
+
+.architectural {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+
+#about .architectural p {
+  text-align: center;
+  max-width: 70%;
+}
+
+.paintshor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+  max-width: 70%;
+}
+
+.aboutidxp {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutnav {
+  align-self: flex-end;
+  font-size: 40px;
 }
 
 /* CONTACT */
@@ -1227,7 +1275,7 @@ font-size: .8rem;
 #return {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   /* padding: 1em; */
 
@@ -1443,6 +1491,11 @@ font-size: .8rem;
     justify-content: center;
   }
 
+  .projlink.servicesidxlink {
+    max-width: 100%;
+    padding: 0 2em;
+  }
+
   .beforeafter {
     gap: 0;
   }
@@ -1511,6 +1564,22 @@ font-size: .8rem;
   #about p {
     max-width: 100%;
     padding: 2em;
+  }
+
+  .paintshor {
+    max-width: 100%;
+  }
+
+  #about .aboutpaints p {
+    max-width: 100%;
+  }
+
+  .architectural {
+    max-width: 100%;
+  }
+
+  #about .architectural p {
+    max-width: 100%;
   }
 
   .hamburger-menu {
