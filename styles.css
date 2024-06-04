@@ -236,6 +236,31 @@ nav .selected {
   width: 100%;
 }
 
+.banner.winterDiscount {
+  background-image: url(dumbWinter1.png);
+  height: fit-content;
+  padding: 3rem 3rem 0;
+  display: flex;
+  align-items: flex-start;
+  height: 40vh;
+  width: 100%;
+}
+
+.banner.architecturalDiscount {
+  background-image: url(dumbArchitect1.png);
+  height: fit-content;
+  padding: 3rem 3rem 0;
+  display: flex;
+  align-items: flex-start;
+  height: 40vh;
+  width: 100%;
+}
+
+p.servicesextra {
+  padding: 1em;
+  text-align: var(--textalign);
+}
+
 #servicesblurb {
   padding: 2rem;
   max-width: 100%;
@@ -271,9 +296,9 @@ nav .selected {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4em;
+  padding: 2em;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
 
 }
 
@@ -925,6 +950,72 @@ footer {
 
 .trades-ul li {
   max-width: 100%;
+}
+
+/* Winter Discount */
+
+#winterDiscount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  text-align: var(--textalign);
+  max-width: 80vw;
+  line-height: 1.5;
+  margin-bottom: 4em;
+}
+
+#winterDiscountSticker {
+  margin-top: 6em;
+  width: 80vw;
+}
+
+#winterSticker {
+  border-radius: 50%;
+  width: 6em;
+  height: 6em;
+  background-color: #0b306a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .4em;
+  color: white;
+  text-align: center;
+  /* font-size: .6em; */
+  border: 0px solid white;
+  transition: 0.5s ease;
+}
+
+
+#winterSticker:hover {
+  transform: scale(1.2);
+  border: 4px solid white;
+}
+
+#winterSticker h1 {
+  font-family: var(--header-font);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: .8em;
+  
+}
+
+#winterSticker p {
+  font-size: .4em;
+
+}
+
+/* Architectural Discount */
+
+#architecturalDiscount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  text-align: var(--textalign);
+  max-width: 80vw;
+  line-height: 1.5;
+  margin-bottom: 4em;
 }
 
 /* PRODUCTS */
@@ -1654,7 +1745,7 @@ font-size: 1em;
   }
 
   #bannervert {
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 100vw;
   }
 
