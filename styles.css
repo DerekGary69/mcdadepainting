@@ -411,9 +411,19 @@ footer {
   margin-top: 2em;
 }
 
+#featured-projects h3 {
+  font-size: 1rem;
+  text-align: var(--textalign);
+
+}
+
 #featured-projects h2 {
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.15rem;
+  text-align: var(--textalign);
+}
+
+#featured-projects h5 {
   text-align: var(--textalign);
 }
 
