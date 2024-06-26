@@ -425,6 +425,7 @@ footer {
 
 #featured-projects h5 {
   text-align: var(--textalign);
+  margin-bottom: 1rem;
 }
 
 #featured-projects .project {
