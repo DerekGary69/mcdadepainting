@@ -160,10 +160,14 @@ h5 {
   display: none !important;
 }
 
+.hidden {
+  display: none !important;
+}
 
 #burgermenu.open {
   opacity: 1;
   pointer-events: all;
+  margin-top: 1rem;
 }
 
 header {
@@ -224,7 +228,7 @@ nav a:hover:not(.navtitle) {
   justify-content: space-evenly;
   width: max-content;
   padding-right: 4em;
-
+  overflow: scroll;
 }
 
 nav .selected {
@@ -334,22 +338,34 @@ p.servicesextra {
   flex-direction: column-reverse;
   padding: 1rem;
   width: 80vw;
-  padding-bottom: 3rem;
+  padding-bottom: 4.5rem;
 }
 
-
-
 footer {
+  width: 100%;
+}
+
+#contactinfo {
   /* position: fixed; */
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2em 0 2em 0;
+  padding: 2em 0 1em 0;
   bottom: 0;
   left: 0;
+  /* gap: 2em; */
   background-color: var(--background-color);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem;
+
 }
 
 .ourinfo {
@@ -674,6 +690,10 @@ footer {
   font-size: 1.2em;
 }
 
+#about a:not(.aboutnav) {
+  text-decoration: underline;
+}
+
 #about h3 {
   font-size: 1em;
 }
@@ -738,7 +758,8 @@ footer {
 
 .aboutnav {
   align-self: flex-end;
-  font-size: 2em;
+  font-size: 2.5em;
+  margin: 0 auto;
 }
 
 /* CONTACT */
@@ -755,6 +776,10 @@ footer {
   flex-direction: column;
   align-items: center;
   
+}
+
+#contact .links p {
+  text-align: var(--textalign);
 }
 
 #messagestatus p {
@@ -777,8 +802,13 @@ footer {
   width: 80vw;
   gap: 2rem;
   margin-bottom: 2rem;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   /* border-bottom: 1px solid var(--accent-color); */
+}
+
+.links a {
+  text-decoration: underline;
+
 }
 
 /* .links > * {
@@ -926,11 +956,11 @@ footer {
 }
 
 .service img {
-  width: 100%; /* Set the width to fill the container */
+  width: 100%; 
   padding: 0 1rem;
-  height: 20rem; /* Set a fixed height */
-  object-fit: cover; /* Scale the image to cover the container */
-  object-position: center; /* Center the image */
+  height: 20rem; 
+  object-fit: cover; 
+  object-position: center; 
 }
 
 .homeservice {
@@ -1054,7 +1084,7 @@ footer {
 }
 
 #products p {
-  padding: 1em 0 1em 2em;
+  padding: 1em 0 1em 0;
   max-width: 80vw;
   line-height: 1.5;
 }
@@ -1349,12 +1379,41 @@ font-size: 1em;
 
 }
 
-.testimonial {
+#testimonialsection {
+
+}
+
+#testimonialsection p {
+  padding: 1em;
+  text-align: var(--textalign);
+  max-width: 80vw;
+  line-height: 1.5;
+
+}
+
+#testimonialsection h2 {
+  font-size: 1.2em;
+  text-align: var(--textalign);
+
+}
+
+.testimony p {
+  padding: 1em;
+  text-align: var(--textalign);
+  max-width: 80vw;
+  line-height: 1.5;
+}
+
+.testimony i {
+  padding: 1em;
+}
+
+/* .testimonial {
   padding: 2em;
-  /* display: flex; */
+  display: flex;
   text-align: var(--textalign);
   font-size: .8em;
-}
+} */
 
 .heroimgs {
   display: flex;
@@ -1411,6 +1470,7 @@ font-size: 1em;
 }
 
 #return {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -1577,9 +1637,10 @@ font-size: 1em;
 /* .pairimgs > :nth-child(2) {
   padding-left: .5em;
 } */
+ 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
   :root {
     --textalign: center;
@@ -1902,7 +1963,7 @@ font-size: 1em;
     grid-template-columns: repeat(1, 1fr);
   }
 
-  footer {
+  #contactinfo {
     flex-direction: column;
     /* align-items: center; */
     padding: 0;
@@ -1910,13 +1971,13 @@ font-size: 1em;
     margin-bottom: 4em;
   }
 
-  footer > * {
+  #contactinfo > *:not(.button) {
     padding: 2em;
   }
 
-  #contact p {
+  /* #contact p:not(.links p) {
     text-align: left;
-  }
+  } */
 
   .links {
     flex-direction: column;

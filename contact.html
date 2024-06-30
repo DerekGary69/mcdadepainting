@@ -22,6 +22,7 @@
         <a href="projects.html">Projects</a>
         <a href="recommended.html">Recommended Products</a>
         <a href="about.html">About Us</a>
+        <a href="testimonials.html">Testimonials</a>
         <a href="contact.html" class="selected">Contact</a>
     </div>
 
@@ -34,6 +35,7 @@
                     <a href="projects.html">Projects</a>
                     <a href="recommended.html">Recommended Products</a>
                     <a href="about.html">About Us</a>
+                    <a href="testimonials.html">Testimonials</a>
                     <a href="contact.html" class="selected">Contact</a>     
                 </div>     
                 <div class="hamburger-menu" onclick="toggleBurger()">
@@ -49,15 +51,27 @@
         <h2>Request a Quote</h2>
         <p id="contactblurb">Ready to give your space a fresh new look? Let's chat about the painting job you have in mind. Whether it's just a room, an exterior, or a unique project, we're here to help. Share the details about the size, scope, and any specific ideas you have – your input is crucial in tailoring our approach to your needs. No pressure, just a friendly conversation to get started on transforming your space. Shoot us the details about your painting project, and we'll take it from there!<br><br><br>We will contact you at your nominated email address/phone number. If you have a preference as to which address or at what time, please include that in your message.</p>
         <div class="links">
-            <a href="tel:0437933192">0437 933 192 (Sydney/Jervis Bay)</a>
-            <a href="tel:0407406353">0407 406 353 (Canberra/Jervis Bay)</a>
+            <p>
+                David:
+                <a href="tel:0407406353">0407 406 353</a>
+                (Canberra/Jervis Bay)
+            </p>
+            <p>
+                Luka:
+                <a href="tel:0437933192">0437 933 192</a>
+                (Sydney/Jervis Bay)
+            </p>
 
             <span><a href="mailto:mcdadepainting@gmail.com">mcdadepainting@gmail.com</a></span>
         </div>        
         <div id="contactlayout">            
-            <form id="contactform" autocomplete="off" netlify>
+            <form id="contactform" autocomplete="off" netlify netlify-honeypot="honeypot">
                 <div id="formvert">
                     <div id="formhor">
+                        <div class="hidden">
+                            <label for="honeypot">Do not fill this out</label>
+                            <input type="text" id="honeypot" name="honeypot">
+                        </div>
                         <div>
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" placeholder="Your name here" required autocomplete="new-name">
